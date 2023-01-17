@@ -10,6 +10,8 @@ The actual implementation of it could be found [here](https://github.com/theisla
 ## Motivation 
 Extensive need of validating and comparing different integration tools as well as their hyper parameters in the lab makes this
 project highly up-to-date.This pipeline would allow researchers perform analysis of their integration tools performance.
+## Usage 
+Input should be ```.h5ad``` files containing sc expression data including different batches. The output should be ```.h5ad``` with integrated batch data. 
 ## Validation
 To see whether SCIBP works and does so efficiently unit tests need to be developed.   
 - [ ] negative/positive controls
