@@ -16,14 +16,13 @@ Data should include different batches and cell types.The output should be ```.h5
 pandas dataframe with all the parameters for the different metrics.
 ## Validation
 To see whether SCIBP works and does so efficiently unit tests need to be developed.   
-- [ ] negative/positive controls
-  1. Integrated lab single cell dataset is sampled in two subsets. Cells from one subset are randomly assigned to batch labels - this would be positive
-     control. Remaining subset is artificially introduced to batch effect via any predefined manner of changing its expression data - this would be negative
-     control. SCIBP is expected to rate better and rank higher the positive control compared to negative.
-  2. Open-source integrated and non-integrated data as positive and negative controls. The SCIBP result should rank integrated data higher.
-- [ ] efficacy controls 
-    
-    High throughput data either open source or lab source should not break the SCIBP. Dataset containing large amounts of 
-    cells should be ranked better than negative controls.
-- [ ] __WIP__
+
+| Case study                |    Data    |   Result |
+|:--------------------------|:----------:|--:|
+| integrated samples don't need integration | 1 sample split into 2 batches artificially | Integrated sample |
+| scib should not differ technical replicates  |  technical replicate samples  | identical samples have the same scib performance |
+| scanVI integration of technical variability preserves biological variability |  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples should produce batch effect, which is removed when dataset is integrated. This should result in higher scib score|
+| CRISPRclean depletion preserves biological variability and produces and has higher scib performance |  same samples prepared normally and with jumpcode (JC) processing step | JC samples have higher overall Score and biological variability metrics  |
+| scib differs integrated and un-integrated datasets |  Reyfman data: unintegrated vs integrated   | Integrated datasets are ranked higher than un-integrated |
+| high throughput data is available to be processed by scib without issues|  dataset that contains big ammount of cells | scib doesn't break when analysing large data|
 
