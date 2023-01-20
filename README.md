@@ -19,7 +19,7 @@ To see whether SCIBP works and does so efficiently unit tests need to be develop
 
 | Case study                |    Data    |   Result |
 |:--------------------------:|:----------:|:--:|
-| integrated samples don't need integration | 1 sample split into 2 batches artificially | Integrated sample |
+| integrated samples don't need integration | 1 sample split into 2 batches artificially | dataset should rank higher than those with batch effect (i.e un-integrated 3' and 5' samples)  |
 | scib should not differ technical replicates  |  technical replicate samples  | identical samples have the same scib performance |
 | scanVI integration of technical variability preserves biological variability |  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples should produce batch effect, which is removed when dataset is integrated. This should result in higher scib score|
 | CRISPRclean depletion preserves biological variability and produces and has higher scib performance |  same samples prepared normally and with jumpcode (JC) processing step | JC samples have higher overall Score and biological variability metrics  |
