@@ -18,7 +18,7 @@ pandas dataframe with all the parameters for the different metrics.
 To see whether SCIBP works and does so efficiently unit tests need to be developed.   
 
 | Case study                |    Data    |   Result |
-|:--------------------------|:----------:|--:|
+|:--------------------------:|:----------:|:--:|
 | integrated samples don't need integration | 1 sample split into 2 batches artificially | Integrated sample |
 | scib should not differ technical replicates  |  technical replicate samples  | identical samples have the same scib performance |
 | scanVI integration of technical variability preserves biological variability |  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples should produce batch effect, which is removed when dataset is integrated. This should result in higher scib score|
