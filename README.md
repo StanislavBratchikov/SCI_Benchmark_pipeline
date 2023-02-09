@@ -17,12 +17,12 @@ pandas dataframe with all the parameters for the different metrics.
 ## Validation
 To see whether SCIBP works and does so efficiently unit tests need to be developed.   
 
-| Case study                |    Data    |   Result |
+| Case study                |    Data    |   Result | Samples |
 |:--------------------------:|:----------:|:--:|
-| integrated samples don't need integration | 1 sample split into 2 batches artificially | dataset should rank higher than those with batch effect (i.e un-integrated 3' and 5' samples)  |
-| scib should not differ technical replicates  |  technical replicate samples  | identical samples have the same scib performance |
-| scanVI integration of technical variability preserves biological variability |  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples should produce batch effect, which is removed when dataset is integrated. This should result in higher scib score|
-| CRISPRclean depletion preserves biological variability and produces higher scib performance |  same samples prepared normally and with jumpcode (JC) processing step | JC samples have higher overall Score and biological variability metrics  |
-| scib differs integrated and un-integrated datasets |  Reyfman data: unintegrated vs integrated   | Integrated datasets are ranked higher than un-integrated |
-| high throughput data is available to be processed by scib without issues|  dataset that contains big ammount of cells | scib doesn't break when analysing large data|
+| integrated samples don't need integration | 1 sample split into 2 batches artificially | dataset should rank higher than those with batch effect (i.e un-integrated 3' and 5' samples)  | SC334 |
+| same biosamples should perform similarly |  technical replicate samples  | samples have the same scib performance |SC311, SC312|
+| 3' and 5' chemistry samples integration|  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples produce batch effect. Integration should increase scib scores| SC486, SC612|
+| CRISPRclean depletion samples produce batch which vanishes after integration |  same samples prepared normally and with jumpcode (JC) processing step | JC and SC samples are scored higher after integration | SC334, JC334|
+|  |  Reyfman data: unintegrated vs integrated   | Integrated datasets are ranked higher than un-integrated | ??? |
+| scib handles overintergrated samples|  overinegration of biologically different samples  | scib doesn't break when analysing large data| ???|
 
