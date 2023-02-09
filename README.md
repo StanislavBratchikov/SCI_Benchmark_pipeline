@@ -18,7 +18,7 @@ pandas dataframe with all the parameters for the different metrics.
 To see whether SCIBP works and does so efficiently unit tests need to be developed.   
 
 | Case study                |    Data    |   Result | Samples |
-|:--------------------------:|:----------:|:--:|
+|:--------------------------:|:----------:|:--:|:--:|
 | integrated samples don't need integration | 1 sample split into 2 batches artificially | dataset should rank higher than those with batch effect (i.e un-integrated 3' and 5' samples)  | SC334 |
 | same biosamples should perform similarly |  technical replicate samples  | samples have the same scib performance |SC311, SC312|
 | 3' and 5' chemistry samples integration|  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples produce batch effect. Integration should increase scib scores| SC486, SC612|
