@@ -23,6 +23,6 @@ To see whether SCIBP works and does so efficiently unit tests need to be develop
 | same biosamples should perform similarly |  technical replicate samples  | samples have the same scib performance |SC311, SC312|
 | 3' and 5' chemistry samples integration|  same samples prepared with different chemistry (Karolina’s 3' vs 5' project)  | un-integrated samples produce batch effect. Integration should increase scib scores| SC486, SC612|
 | CRISPRclean depletion samples produce batch which vanishes after integration |  same samples prepared normally and with jumpcode (JC) processing step | JC and SC samples are scored higher after integration | SC334, JC334|
-|  |  Reyfman data: unintegrated vs integrated   | Integrated datasets are ranked higher than un-integrated | ??? |
+| scVI integration of Reyfman dataset|  Reyfman data: unintegrated vs integrated   | Integrated datasets are ranked higher than un-integrated | ??? |
 | scib handles overintergrated samples|  overinegration of biologically different samples  | scib doesn't break when analysing large data| ???|
 
